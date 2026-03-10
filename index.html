@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <style>
-    /* fallback if Tailwind fails to load */
+    
     body { background-color: #1f2937; color: white; }
     .hidden { display:none !important; }
   </style>
@@ -42,7 +42,7 @@
 
   <main class="max-w-4xl mx-auto p-6 space-y-16">
     <section id="intro" class="space-y-4">
-      <!-- intro visible by default -->
+      
       <h2 class="text-2xl font-semibold opacity-0 translate-y-4 transition-all duration-700" data-reveal>O que é Engenharia de Software:</h2>
       <p>A Engenharia de Software é uma disciplina da engenharia que se concentra em todos os aspectos da produção de software, desde as fases iniciais de especificação do sistema até a manutenção desse sistema após sua entrada em operação.</p>
       <h2 class="text-2xl font-semibold opacity-0 translate-y-4 transition-all duration-700" data-reveal>O que é Scrum:</h2>
@@ -108,7 +108,7 @@
   </footer>
 
   <script>
-    // Tab switching
+   
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const target = btn.getAttribute('data-tab');
@@ -124,7 +124,7 @@
       });
     });
 
-    // Reveal on scroll
+    
     const reveals = document.querySelectorAll('[data-reveal]');
     function handleScroll() {
       reveals.forEach(el => {
@@ -138,7 +138,7 @@
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 
-    // Theme toggle
+    
     const themeBtn = document.getElementById('theme-toggle');
     themeBtn?.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
