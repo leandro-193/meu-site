@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Engenharia de Software & Scrum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    /* fallback if Tailwind fails to load */
+    body { background-color: #1f2937; color: white; }
+    .hidden { display:none !important; }
+  </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen transition-colors duration-500" style="font-family:'Inter',sans-serif;">
+  <header class="relative bg-cover bg-center" style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.bub5qfCOE3c_dUOqty0ajAHaFk?rs=1&pid=ImgDetMain&o=7&rm=3');">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 p-8">
+      <h1 class="text-4xl md:text-6xl font-bold mb-2" style="font-family:'Space Grotesk',sans-serif; color:#fff;">
+        Engenharia de Software <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">& Metodologia Scrum</span>
+      </h1>
+      <p class="text-slate-200 max-w-2xl">
+        Uma exploração dos fundamentos essenciais da Engenharia de Software e da metodologia ágil mais utilizada no mercado.
+      </p>
+    </div>
+  </header>
+
+  <nav class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-slate-700/50">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+      <div class="flex gap-1 overflow-x-auto">
+        <button data-tab="intro" class="tab-btn flex items-center gap-2 px-5 py-3 rounded-lg font-medium bg-gradient-to-r from-cyan-500 to-teal-500 text-white shadow-lg shadow-cyan-500/25">Introdução</button>
+        <button data-tab="fundamentos" class="tab-btn flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-slate-400 hover:text-white hover:bg-slate-800">Fundamentos de Engenharia de Software</button>
+        <button data-tab="scrum" class="tab-btn flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-slate-400 hover:text-white hover:bg-slate-800">Metodologia Scrum</button>
+      </div>
+      <div class="relative">
+        <button id="theme-toggle" class="text-slate-200 bg-slate-700/30 px-3 py-1 rounded hover:bg-slate-600/50 transition pulse">🌙</button>
+        <span id="theme-hint" class="absolute -top-6 right-0 text-xs text-yellow-300 font-semibold animate-bounce pointer-events-none">Clique aqui</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto p-6 space-y-16">
+    <section id="intro" class="space-y-4">
+      <!-- intro visible by default -->
+      <h2 class="text-2xl font-semibold opacity-0 translate-y-4 transition-all duration-700" data-reveal>O que é Engenharia de Software:</h2>
+      <p>A Engenharia de Software é uma disciplina da engenharia que se concentra em todos os aspectos da produção de software, desde as fases iniciais de especificação do sistema até a manutenção desse sistema após sua entrada em operação.</p>
+      <h2 class="text-2xl font-semibold opacity-0 translate-y-4 transition-all duration-700" data-reveal>O que é Scrum:</h2>
+      <p>Scrum é um framework ágil para gerenciamento e planejamento de projetos de software. No Scrum, os projetos são''' divididos em ciclos chamados de Sprints, que representam um período dentro do qual um conjunto de atividades deve ser executado.</p>
+      <h3 class="text-xl font-semibold">Objetivos deste trabalho</h3>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Compreender os fundamentos da Engenharia de Software</li>
+        <li>Explorar a metodologia ágil Scrum</li>
+        <li>Entender como aplicar esses conceitos em projetos reais</li>
+      </ul>
+    </section>
+
+    <section id="fundamentos" class="space-y-6 hidden">
+      <h2 class="text-3xl font-bold opacity-0 translate-y-4 transition-all duration-700" data-reveal>Fundamentos de Engenharia de Software</h2>
+      <p>A base para construir sistemas de software de qualidade, escaláveis e manuteníveis.</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <h3 class="text-2xl font-semibold opacity-0 translate-y-4 transition-all duration-700" data-reveal>Processos de Software</h3>
+          <p>Um processo de software é um conjunto de atividades relacionadas que levam à produção de um produto de software.</p>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-2xl font-semibold opacity-0 translate-y-4 transition-all duration-700" data-reveal>Modelos de Processo</h3>
+          <p>Existem diversos modelos de processo de desenvolvimento de software, como o Modelo Cascata, Incremental, Espiral, entre outros.</p>
+        </div>
+      </div>
+      <h3 class="text-2xl font-semibold opacity-0 translate-y-4 transition-all duration-700" data-reveal>Qualidade de Software</h3>
+      <p>Garantir que o software atenda às necessidades do usuário com qualidade, considerando confiabilidade, usabilidade, eficiência e manutenibilidade.</p>
+    </section>
+
+    <section id="scrum" class="space-y-6 hidden">
+      <h2 class="text-3xl font-bold">Metodologia Scrum</h2>
+      <p>Um framework ágil que ajuda equipes a trabalhar de forma colaborativa e entregar valor continuamente.</p>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="p-4 bg-slate-800/50 rounded-lg shadow hover:scale-105 transform transition card">
+          <img src="https://th.bing.com/th/id/OIP.xHguhU9VHdw5P7oFLg-yeAHaF_?w=214&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Product Owner" class="rounded mb-2 opacity-0 translate-y-4 transition-all duration-700" data-reveal>
+          <h4 class="font-semibold">Product Owner</h4>
+          <p>Maximiza o valor do produto e do trabalho do time de desenvolvimento.</p>
+        </div>
+        <div class="p-4 bg-slate-800/50 rounded-lg shadow hover:scale-105 transform transition card">
+          <img src="https://th.bing.com/th/id/OIP.j9oFzWRnDnU88Z332aBaewHaDt?w=326&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Scrum Master" class="rounded mb-2 opacity-0 translate-y-4 transition-all duration-700" data-reveal>
+          <h4 class="font-semibold">Scrum Master</h4>
+          <p>Facilita o processo, remove impedimentos e mantém a equipe alinhada às práticas ágeis.</p>
+        </div>
+        <div class="p-4 bg-slate-800/50 rounded-lg shadow hover:scale-105 transform transition card">
+          <img src="https://media.istockphoto.com/id/1354205073/pt/foto/diverse-group-of-professionals-celebrate-success-in-modern-office-brainstorming-it-programmers.jpg?s=170667a&w=0&k=20&c=D-5ApabT7sFDNzcDSUObfUWJuZdGyXKzYjtQlNuWWmw=" alt="Time de Desenvolvimento" class="rounded mb-2 opacity-0 translate-y-4 transition-all duration-700" data-reveal>
+          <h4 class="font-semibold">Time de Desenvolvimento</h4>
+          <p>Profissionais responsáveis por entregar incrementos utilizáveis.</p>
+        </div>
+      </div>
+      <h3 class="text-2xl font-semibold">Eventos principais</h3>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Sprint (2‑4 semanas)</li>
+        <li>Sprint Planning</li>
+        <li>Daily Scrum</li>
+        <li>Sprint Review</li>
+        <li>Sprint Retrospective</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="text-center text-slate-500 p-4">
+    Tarefa De Fundamentos De Engenharia de Software • 2026
+  </footer>
+
+  <script>
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-tab');
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('bg-gradient-to-r', 'from-cyan-500', 'to-teal-500', 'text-white', 'shadow-lg', 'shadow-cyan-500/25');
+          b.classList.add('text-slate-400');
+        });
+        btn.classList.add('bg-gradient-to-r', 'from-cyan-500', 'to-teal-500', 'text-white', 'shadow-lg', 'shadow-cyan-500/25');
+        ['intro', 'fundamentos', 'scrum'].forEach(id => {
+          const sec = document.getElementById(id);
+          if (sec) sec.classList.toggle('hidden', id !== target);
+        });
+      });
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('[data-reveal]');
+    function handleScroll() {
+      reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          el.classList.remove('opacity-0', 'translate-y-4');
+          el.classList.add('opacity-100', 'translate-y-0');
+        }
+      });
+    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      themeBtn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
+
